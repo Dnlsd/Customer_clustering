@@ -1,6 +1,6 @@
 # Análise de clusterização de clientes de um varejo
 
-![imagem](relatorios\imagens\2_clustering\PCA\Visualização_PCA.png)
+![imagem](relatorios/imagens/2_clustering/PCA/Visualização_PCA.png)
 
 # Sobre a base de dados e contexto inicial
 ## Explicação geral da base
@@ -11,13 +11,13 @@ O departamento de _marketing_ foi pressionado a investir seu orçamento com mais
 
 ## Contexto técnico
 
-1. [Dicionário de dados](referencias\dicio_dados.md)
-2. [Base de dados](dados\ml_project1_data.csv)
+1. [Dicionário de dados](referencias/dicio_dados.md)
+2. [Base de dados](dados/ml_project1_data.csv)
 
 ## Origem dos dados
 Essa é uma base de dados originária de um processo seletivo para o time de analistas de dados do Ifood. Detalhes e intruções mais detalhadas podem ser obtidas no link: [dados ifood](https://github.com/kdutrajano/ifood-data-business-analyst-test). Este projeto usará essa base como referência e contexto acima, porém objetivos adaptados.
 
-- [Case original](referencias\iFood_Data_Analyst_Case.pdf.pdf)
+- [Case original](referencias/iFood_Data_Analyst_Case.pdf.pdf)
 
 # Objetivo do projeto
 
@@ -80,37 +80,37 @@ Assim, mantendo o laço com o contexto original, será possível traçar estrat�
 # Resultados
 ## Notebooks de referência
 
-Análise Exploratória dos dados e discussão inicial: [EDA](notebooks\01_EDA.ipynb)<br>
-Comparação de modelos de clusterização e discussão: [Clusterização](notebooks\02_clusterig.ipynb)<br>
-Clusterização com PCA: [Clusterização PCA](notebooks\02_clusterig_PCA.ipynb)<br>
-Criação do modelo e discussão do projeto: [Modelo de classificação](notebooks\03_classification.ipynb).<br>
+Análise Exploratória dos dados e discussão inicial: [EDA](notebooks/01_EDA.ipynb)<br>
+Comparação de modelos de clusterização e discussão: [Clusterização](notebooks/02_clusterig.ipynb)<br>
+Clusterização com PCA: [Clusterização PCA](notebooks/02_clusterig_PCA.ipynb)<br>
+Criação do modelo e discussão do projeto: [Modelo de classificação](notebooks/03_classification.ipynb).<br>
 
 
 ## Principais Conclusões
 
 ### Análise de correlações:
 
-Disponível em: [EDA](notebooks\01_EDA.ipynb)<br>
+Disponível em: [EDA](notebooks/01_EDA.ipynb)<br>
 
 
 - **Sobre correlações e features**: 
 
 1. Parece existir uma forte **influência dos filhos nessa base de clientes**, tal como uma certa fidelidade de clientes mais antigos e preferência por produtos da linha de vinhos e carnes. Isso pode ser percebido pela correlação negativa de `HasChildren`* com o engajamento das campanhas.
 
-![Correlação das principais features com a coluna `Response`](relatorios\imagens\1_EDA\Correlacao_RESPONSE_colunas.png)
+![Correlação das principais features com a coluna `Response`](relatorios/imagens/1_EDA/Correlacao_RESPONSE_colunas.png)
 *Coluna criada artificialmente a partir de técnicas de _feature engineering_
 <br>
 
 2. Clientes que já aceitaram campanhas (`AcceptedTotal`)* criam um **hábito de resposta** (`MntTotal` e `DaySinceEnrolled`)*.
 
-![imagem](relatorios\imagens\1_EDA\quem_participa_camp_compra_mais.png)
+![imagem](relatorios/imagens/1_EDA/quem_participa_camp_compra_mais.png)
 *Colunas criadas artificialmente a partir de técnicas de _feature engineering_
 
 <br>
 
 3. Existe uma boa relação de consumo entre as **categorias `MntWines` e `MntMeatProducts` e clientes de alta renda (`Income`)**; Esse pode ser um perfil a ser explorado no futuro.
 
-![imagem](relatorios\imagens\1_EDA\cat_majoritaria_income_MntTotal.png)
+![imagem](relatorios/imagens/1_EDA/cat_majoritaria_income_MntTotal.png)
 
 <br>
 
@@ -137,7 +137,7 @@ Podemos definir inicialmente 3 perfils abrangentes de acordo com os gráficos e 
 
 ### Análise de clusters
 
-Disponível em: [Clusterização](notebooks\02_clusterig.ipynb) e [Clusterização PCA](notebooks\02_clusterig_PCA.ipynb)<br>
+Disponível em: [Clusterização](notebooks/02_clusterig.ipynb) e [Clusterização PCA](notebooks/02_clusterig_PCA.ipynb)<br>
 
 
 **Descrição qualitativa dos clusters:**
@@ -150,14 +150,14 @@ Disponível em: [Clusterização](notebooks\02_clusterig.ipynb) e [Clusterizaç�
 
 <br>
 
-![imagem](relatorios\imagens\1_EDA\pro_clust_por_cat.png)
+![imagem](relatorios/imagens/1_EDA/pro_clust_por_cat.png)
 
 <br>
 
 
 ### Análise de modelos:
 
-Disponível em: [Modelo de classificação](notebooks\03_classification.ipynb).<br>
+Disponível em: [Modelo de classificação](notebooks/03_classification.ipynb).<br>
 
 
 O modelo de escolha baseado nas melhores métricas de avaliação de modelos de classificação foi o `LogisticRegression`. Modelos de gradiente e àrvores se mostrarm promissores, em especial os de gradiente com resultados semelhantes nas métricas e tempos otimizados (com é de se esperar para essa classe de modelos). O `LogisticRegression` prevaleceu, pois com ele temos um exemplo mais simples que os de Boosting ou Árvore; o que facilita a comunicação com áreas não-técnicas (como steakholders). 
@@ -168,7 +168,7 @@ Abaixo temos uma matriz de confusão para auxiliar na compreensão da capacidade
 
 <br>
 
-![imagem](relatorios\imagens\3_classification\matriz_confusão.png)
+![imagem](relatorios/imagens/3_classification/matriz_confusão.png)
 
 <br>
 
