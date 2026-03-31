@@ -82,8 +82,8 @@ Assim, mantendo o laço com o contexto original, será possível traçar estrat�
 
 Análise Exploratória dos dados e discussão inicial: [EDA](notebooks/01_EDA.ipynb)<br>
 Comparação de modelos de clusterização e discussão: [Clusterização](notebooks/02_clusterig.ipynb)<br>
-Clusterização com PCA: [Clusterização PCA](notebooks/02_clusterig_PCA.ipynb)<br>
-Criação do modelo e discussão do projeto: [Modelo de classificação](notebooks/03_classification.ipynb).<br>
+Clusterização com PCA: [Clusterização PCA](notebooks/03_clusterig_PCA.ipynb)<br>
+Criação do modelo e discussão do projeto: [Modelo de classificação](notebooks/04_classification.ipynb).<br>
 
 
 ## Principais Conclusões
@@ -111,6 +111,7 @@ Disponível em: [EDA](notebooks/01_EDA.ipynb)<br>
 3. Existe uma boa relação de consumo entre as **categorias `MntWines` e `MntMeatProducts` e clientes de alta renda (`Income`)**; Esse pode ser um perfil a ser explorado no futuro.
 
 ![imagem](relatorios/imagens/1_EDA/cat_majoritaria_income_MntTotal.png)
+*A coluna "Categoria Majoritária" (`MainCategory`) foi criada artificialmente a partir de técnicas de _feature engineering_
 
 <br>
 
@@ -137,7 +138,7 @@ Podemos definir inicialmente 3 perfils abrangentes de acordo com os gráficos e 
 
 ### Análise de clusters
 
-Disponível em: [Clusterização](notebooks/02_clusterig.ipynb) e [Clusterização PCA](notebooks/02_clusterig_PCA.ipynb)<br>
+Disponível em: [Clusterização](notebooks/02_clusterig.ipynb) e [Clusterização PCA](notebooks/03_clusterig_PCA.ipynb)<br>
 
 
 **Descrição qualitativa dos clusters:**
@@ -157,7 +158,7 @@ Disponível em: [Clusterização](notebooks/02_clusterig.ipynb) e [Clusterizaç�
 
 ### Análise de modelos:
 
-Disponível em: [Modelo de classificação](notebooks/03_classification.ipynb).<br>
+Disponível em: [Modelo de classificação](notebooks/04_classification.ipynb).<br>
 
 
 O modelo de escolha baseado nas melhores métricas de avaliação de modelos de classificação foi o `LogisticRegression`. Modelos de gradiente e àrvores se mostrarm promissores, em especial os de gradiente com resultados semelhantes nas métricas e tempos otimizados (com é de se esperar para essa classe de modelos). O `LogisticRegression` prevaleceu, pois com ele temos um exemplo mais simples que os de Boosting ou Árvore; o que facilita a comunicação com áreas não-técnicas (como steakholders). 
