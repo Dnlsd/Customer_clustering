@@ -63,7 +63,7 @@ Assim, mantendo o laço com o contexto original, será possível traçar estrat�
 1. Faça o clone do repositório que será criado a partir deste modelo.
 
     ```bash
-   
+   https://github.com/Dnlsd/Customer_clustering.git
     ```
 
 2. importe o ambiente virtual semelhante ao utilizado.
