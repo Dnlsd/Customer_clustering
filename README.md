@@ -17,7 +17,7 @@ O departamento de _marketing_ foi pressionado a investir seu orçamento com mais
 ## Origem dos dados
 Essa é uma base de dados originária de um processo seletivo para o time de analistas de dados do Ifood. Detalhes e intruções mais detalhadas podem ser obtidas no link: [dados ifood](https://github.com/kdutrajano/ifood-data-business-analyst-test). Este projeto usará essa base como referência e contexto acima, porém objetivos adaptados.
 
-- [Case original](referencias/iFood_Data_Analyst_Case.pdf.pdf)
+- [Case original](referencias/iFood_Case.pdf)
 
 # Objetivo do projeto
 
